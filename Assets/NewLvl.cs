@@ -2,45 +2,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class playerMovement : MonoBehaviour
+public class NewLvl : MonoBehaviour
 {
-    Rigidbody rb;
-    public float speed;
-    public float jumpStrength;
-    public bool onGround = true;
+    // Start is called before the first frame update
     void Start()
     {
-        rb = GetComponent<Rigidbody>();
-    }
-
-    private void Update()
-    {
-        float xSpeed = Input.GetAxis("Horizontal");
-        float ySpeed = Input.GetAxis("Vertical");
-
-        rb.AddTorque(new Vector3(xSpeed, 0, ySpeed) * speed * Time.deltaTime*5);
-        if(Input.GetKeyDown("space") && onGround)
-        {
-            rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
-            onGround = false;
-        }
-
         
-
     }
-  /*  public Transform perfabToSpawn;
+
+    public Transform perfabToSpawn;
     public Transform perfabToSpawn2;
 
     bool isCollide = true;
 
     private void OnCollisionEnter(Collision collision)
     {
-        onGround = true;
    
-        if(collision.collider.tag == "Spawner"){
+        if(collision.collider.tag == "Player"){
             
             if(isCollide){
-                Debug.Log("wer");
+                Debug.Log("wer2");
                 for(int i = 0; i < 200; i++){
                     Vector3 spawnPoint = transform.position + Random.insideUnitSphere * 40;
                     if(i % 2 == 0)
@@ -52,8 +33,10 @@ public class playerMovement : MonoBehaviour
             }
         }
     }
-*/
 
-
-
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
