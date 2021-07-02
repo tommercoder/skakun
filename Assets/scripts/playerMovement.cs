@@ -47,7 +47,7 @@ public class playerMovement : MonoBehaviour
         onGround = true;
         currentJump = 0;
     }
-*/
+
 
 
 
