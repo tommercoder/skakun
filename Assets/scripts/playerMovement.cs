@@ -8,6 +8,10 @@ public class playerMovement : MonoBehaviour
     public float speed;
     public float jumpStrength;
     public bool onGround = true;
+    public const int MAX_JUMPS = 2;
+    public int currentJump = 0;
+    public Camera cam;
+    public Joystick joystick;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -15,19 +19,30 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
-        float xSpeed = Input.GetAxis("Horizontal");
-        float ySpeed = Input.GetAxis("Vertical");
-
-        rb.AddTorque(new Vector3(xSpeed, 0, ySpeed) * speed * Time.deltaTime*5);
-        if(Input.GetKeyDown("space") && onGround)
+        float xSpeed = Input.GetAxis("Horizontal");//joystick.Horizontal;
+        float zSpeed = Input.GetAxis("Vertical");//joystick.Vertical;
+        Vector3 forward = cam.transform.forward;
+        Vector3 right = cam.transform.right;
+        
+        
+        Vector3 desiredMove = forward * -xSpeed + right * zSpeed;
+        rb.AddTorque(desiredMove * speed * Time.deltaTime*5);
+        if(Input.GetKeyDown("space") && (onGround || MAX_JUMPS > currentJump))
         {
-            rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
-            onGround = false;
+            jump();
         }
+    }
+    public void jump()
+    {
+        rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+        onGround = false;
+
+        currentJump++;
     }
     private void OnCollisionEnter(Collision collision)
     {
         onGround = true;
+        currentJump = 0;
     }
 
 
