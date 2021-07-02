@@ -7,20 +7,28 @@ public class playerMovement : MonoBehaviour
     Rigidbody rb;
     public float speed;
     public float jumpStrength;
-
+    public bool onGround = true;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
     }
 
-    private void FixedUpdate()
+    private void Update()
     {
-        
-        Vector3 m_Input = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        float xSpeed = Input.GetAxis("Horizontal");
+        float ySpeed = Input.GetAxis("Vertical");
 
-        //Apply the movement vector to the current position, which is
-        //multiplied by deltaTime and speed for a smooth MovePosition
-        rb.MovePosition(transform.position + m_Input * Time.deltaTime * speed);
+        rb.AddTorque(new Vector3(xSpeed, 0, ySpeed) * speed * Time.deltaTime*5);
+        if(Input.GetKeyDown("space") && onGround)
+        {
+            rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+            onGround = false;
+        }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        onGround = true;
+    }
+
 
 }
