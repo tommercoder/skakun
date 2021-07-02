@@ -8,6 +8,10 @@ public class playerMovement : MonoBehaviour
     public float speed;
     public float jumpStrength;
     public bool onGround = true;
+    public const int MAX_JUMPS = 2;
+    public int currentJump = 0;
+    public Camera cam;
+    public Joystick joystick;
     void Start()
     {
         rb = GetComponent<Rigidbody>();
@@ -15,42 +19,33 @@ public class playerMovement : MonoBehaviour
 
     private void Update()
     {
-        float xSpeed = Input.GetAxis("Horizontal");
-        float ySpeed = Input.GetAxis("Vertical");
-
-        rb.AddTorque(new Vector3(xSpeed, 0, ySpeed) * speed * Time.deltaTime*5);
-        if(Input.GetKeyDown("space") && onGround)
+        float xSpeed = Input.GetAxis("Horizontal");//joystick.Horizontal;
+        float zSpeed = Input.GetAxis("Vertical");//joystick.Vertical;
+        Vector3 forward = cam.transform.forward;
+        Vector3 right = cam.transform.right;
+        
+        
+        Vector3 desiredMove = forward * -xSpeed + right * zSpeed;
+        rb.AddTorque(desiredMove * speed * Time.deltaTime*5);
+        if(Input.GetKeyDown("space") && (onGround || MAX_JUMPS > currentJump))
         {
-            rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
-            onGround = false;
+            jump();
         }
 
         
 
     }
-  /*  public Transform perfabToSpawn;
-    public Transform perfabToSpawn2;
+    public void jump()
+    {
+        rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+        onGround = false;
 
-    bool isCollide = true;
-
+        currentJump++;
+    }
     private void OnCollisionEnter(Collision collision)
     {
         onGround = true;
-   
-        if(collision.collider.tag == "Spawner"){
-            
-            if(isCollide){
-                Debug.Log("wer");
-                for(int i = 0; i < 200; i++){
-                    Vector3 spawnPoint = transform.position + Random.insideUnitSphere * 40;
-                    if(i % 2 == 0)
-                    Instantiate(perfabToSpawn,spawnPoint,perfabToSpawn.rotation);
-                    else
-                    Instantiate(perfabToSpawn2,spawnPoint,perfabToSpawn.rotation);
-                }
-                isCollide = false;
-            }
-        }
+        currentJump = 0;
     }
 */
 
