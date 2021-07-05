@@ -2282,7 +2282,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1559328579}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759026404}
+        m_TargetAssemblyTypeName: SkinsScript, Assembly-CSharp
+        m_MethodName: RedBall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1559328579
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2461,7 +2473,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1759026402}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6fc1414d047f2cc0af52f1ed2502610, type: 3}
+  m_Script: {fileID: 11500000, guid: 2670af793f3bd8e0cb6a8557f2fdb710, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1780712994
@@ -3132,7 +3144,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2071300026}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759026404}
+        m_TargetAssemblyTypeName: SkinsScript, Assembly-CSharp
+        m_MethodName: BlueBall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2071300026
 MonoBehaviour:
   m_ObjectHideFlags: 0
