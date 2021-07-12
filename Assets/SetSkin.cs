@@ -21,6 +21,10 @@ switch (SkinsScript.Skin)
             rend.material = Resources.Load<Material>("Red");
             Debug.Log("Red");
               break;
+          case "Leaves":
+            rend.material = Resources.Load<Material>("Leaves");
+            Debug.Log("Leaves");
+              break;
           default:
             rend.material = Resources.Load<Material>("DefoltSkin");
               break;

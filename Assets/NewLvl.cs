@@ -18,7 +18,7 @@ public class NewLvl : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
    
-        if(collision.collider.tag == "Player"){
+        if(GetComponent<Collider>().tag == "Player"){
             
             if(isCollide){
                 Debug.Log("wer2");
