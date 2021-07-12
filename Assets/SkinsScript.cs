@@ -15,6 +15,10 @@ public class SkinsScript : MonoBehaviour
     }
 
 
+ public void LeavesBall(){
+        Skin = "Leaves";
+    }
+
 
     // Start is called before the first frame update
     void Start()

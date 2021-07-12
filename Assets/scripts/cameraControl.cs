@@ -4,7 +4,7 @@ using UnityEngine;
 using Cinemachine;
 public class cameraControl : MonoBehaviour
 {
-    public GameObject target;
+    /*public GameObject target;
     public float xOffset, yOffset, zOffset;
     public Joystick joystick;
     public CinemachineFreeLook cam;
@@ -21,5 +21,5 @@ public class cameraControl : MonoBehaviour
        // transform.Rotate(Vector3.left, joystick.Vertical * speed);
         // transform.rotation = target.transform.rotation;
 
-    }
+    }*/
 }
