@@ -37,10 +37,13 @@ public class playerMovement : MonoBehaviour
     }
     public void jump()
     {
-        rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
-        onGround = false;
+        if (onGround || MAX_JUMPS > currentJump)
+        {
+            rb.AddForce(Vector3.up * jumpStrength, ForceMode.Impulse);
+            onGround = false;
 
-        currentJump++;
+            currentJump++;
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
