@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 8009d34727ab2b240a9045641eb380c6, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 955a522d2e734804c879724c60fc1304, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -312,8 +312,8 @@ MonoBehaviour:
   Boy: {fileID: 2087863281}
   perfabToSpawn: {fileID: 663740227190960880, guid: 3df174dbe9b48b586bfc92dd79d561ae, type: 3}
   perfabToSpawn2: {fileID: 663740227190960880, guid: 3df174dbe9b48b586bfc92dd79d561ae, type: 3}
-  objectCount: 200
   spawnRadius: 40
+  spawnCollisionCheckRadius: 5
   list: []
 --- !u!4 &206973641
 Transform:
@@ -884,9 +884,10 @@ GameObject:
   - component: {fileID: 772795260}
   - component: {fileID: 772795259}
   - component: {fileID: 863385875}
-  m_Layer: 0
+  - component: {fileID: 772795264}
+  m_Layer: 6
   m_Name: plane
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -981,6 +982,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &772795264
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 772795258}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 10, y: 2.220446e-16, z: 10}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &786363521
 GameObject:
   m_ObjectHideFlags: 3
@@ -2025,7 +2039,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_CollideAgainst:
     serializedVersion: 2
-    m_Bits: 65
+    m_Bits: 64
   m_IgnoreTag: Player
   m_TransparentLayers:
     serializedVersion: 2
@@ -2038,8 +2052,8 @@ MonoBehaviour:
   m_Strategy: 0
   m_MaximumEffort: 3
   m_SmoothingTime: 0.208
-  m_Damping: 2.43
-  m_DampingWhenOccluded: 3.06
+  m_Damping: 1.91
+  m_DampingWhenOccluded: 2.47
   m_OptimalTargetDistance: 0
 --- !u!1 &1864093517
 GameObject:
@@ -2244,12 +2258,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5bfe693f2715c547af71f133e482da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 130
+  speed: 300
   jumpStrength: 11
   onGround: 1
   currentJump: 0
   cam: {fileID: 963194227}
   joystick: {fileID: 74023041}
+  speedOnAir: 10
 --- !u!137 &2087863283
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
