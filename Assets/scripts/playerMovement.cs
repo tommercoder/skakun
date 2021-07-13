@@ -63,7 +63,7 @@ public class playerMovement : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        if(other.CompareTag("ground"))
+        if(other.CompareTag("ground") || other.CompareTag("Bonus"))
         {
             onGround = true;
             currentJump = 0;

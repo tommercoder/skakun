@@ -311,7 +311,7 @@ MonoBehaviour:
   Object: {fileID: 772795263}
   Boy: {fileID: 2087863281}
   perfabToSpawn: {fileID: 663740227190960880, guid: 3df174dbe9b48b586bfc92dd79d561ae, type: 3}
-  perfabToSpawn2: {fileID: 663740227190960880, guid: 3df174dbe9b48b586bfc92dd79d561ae, type: 3}
+  perfabToSpawn2: {fileID: 831410352961533964, guid: 550402f188abe5fe5a96eacbb780c9d4, type: 3}
   spawnRadius: 40
   spawnCollisionCheckRadius: 5
   list: []
@@ -327,7 +327,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &212825348
 GameObject:
@@ -680,9 +680,11 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-
+  - {fileID: 691350121}
+  - {fileID: 1112779897}
+  - {fileID: 146091871}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -921,11 +923,11 @@ GameObject:
   - component: {fileID: 691350122}
   m_Layer: 5
   m_Name: Done
-  m_TagString: Untagged
+  m_TagString: DoneMenu
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &691350121
 RectTransform:
   m_ObjectHideFlags: 0
@@ -937,7 +939,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1500098595}
   - {fileID: 909530178}
   - {fileID: 1976890368}
   m_Father: {fileID: 443697903}
@@ -1163,7 +1164,7 @@ Transform:
   m_LocalScale: {x: 10, y: 4, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &772795264
 BoxCollider:
@@ -1548,7 +1549,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 691350121}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1920,7 +1921,7 @@ GameObject:
   - component: {fileID: 1112779897}
   m_Layer: 5
   m_Name: Moves
-  m_TagString: Untagged
+  m_TagString: UiControls
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2011,6 +2012,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1264811194}
+  m_LocalRotation: {x: 0.09658866, y: -0.56905067, z: 0.06753871, w: 0.8138123}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -2030,24 +2032,13 @@ GameObject:
   - component: {fileID: 1578921546}
   - component: {fileID: 1578921545}
   - component: {fileID: 1578921544}
-  - component: {fileID: 1578921543}
   m_Layer: 0
   m_Name: plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1578921542}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 10, y: 2.220446e-16, z: 10}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_IsActive: 0
 --- !u!64 &1578921544
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -2123,7 +2114,7 @@ Transform:
   m_LocalScale: {x: 1.0202297, y: 3.4226, z: 1.200487}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1821634646
 PrefabInstance:
@@ -2470,7 +2461,7 @@ RectTransform:
   m_Children:
   - {fileID: 341448747}
   m_Father: {fileID: 691350121}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2729,7 +2720,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2087863282
 MonoBehaviour:
@@ -2814,6 +2805,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f162a28095bb8593bff3b67a49e8764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
   WinMenu: {fileID: 691350120}
   MoveMenu: {fileID: 1112779896}
 --- !u!114 &2087863285
@@ -2839,7 +2831,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 831410352961533964, guid: 550402f188abe5fe5a96eacbb780c9d4, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 831410352961533964, guid: 550402f188abe5fe5a96eacbb780c9d4, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2900,7 +2892,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 663740227190960880, guid: 3df174dbe9b48b586bfc92dd79d561ae, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 663740227190960880, guid: 3df174dbe9b48b586bfc92dd79d561ae, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2965,7 +2957,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5073895609166396480, guid: 7e802a80dddd1d74cbf5459da054ce08, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5073895609166396480, guid: 7e802a80dddd1d74cbf5459da054ce08, type: 3}
       propertyPath: m_LocalPosition.x

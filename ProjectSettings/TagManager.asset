@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Spawner
   - Bonus
+  - ground
+  - DoneMenu
+  - UiControls
   layers:
   - Default
   - TransparentFX
