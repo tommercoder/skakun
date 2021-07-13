@@ -5,7 +5,10 @@ TagManager:
   serializedVersion: 2
   tags:
   - Spawner
+  - Bonus
   - ground
+  - DoneMenu
+  - UiControls
   layers:
   - Default
   - TransparentFX

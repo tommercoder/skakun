@@ -12,11 +12,18 @@ public class BobusScript : MonoBehaviour
     } 
     public static int getBonuses(){
         return BobusScript.bonuses;
-    } 
+    }
     // Start is called before the first frame update
+    private void Awake()
+    {
+        canvas = GameObject.Find("Canvas");
+        WinMenu = GameObject.Find("Done");
+        MoveMenu = GameObject.Find("Moves");
+    }
     void Start()
     {
-        
+        WinMenu.SetActive(false);
+       // MoveMenu = GameObject.FindWithTag("UiControls");
     }
 
     // Update is called once per frame
@@ -24,29 +31,34 @@ public class BobusScript : MonoBehaviour
     {
         
     }
+    public GameObject canvas;
+    public GameObject WinMenu;
+    public GameObject MoveMenu;
 
-    void OnTriggerEnter(Collider other){
-            if(other.CompareTag("Bonus")){
+    private void OnTriggerEnter(Collider other)
+    {
+        if (GetComponent<Collider>().tag == "Bonus")
+        {
             Renderer rend = GetComponent<Renderer>();
             rend.material = Resources.Load<Material>("Red");
             BobusScript.addBonuses();
-            if(ObjectSpawner.CountBonuses == 0){
-                
+            if (ObjectSpawner.CountBonuses == 0)
+            {
+
                 MoveMenu.SetActive(false);
                 WinMenu.SetActive(true);
 
             }
-            
-            
+
             ObjectSpawner.CountBonuses--;
-            }
 
+        }
     }
-
-    public GameObject WinMenu;
-    public GameObject MoveMenu;
-
-
+    private void OnCollisionEnter(Collision collision)
+    {
+       
+           
+    }
 }
      
 

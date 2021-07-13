@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 9057394581399902464}
   - component: {fileID: 6509648502328779433}
   - component: {fileID: -3565927799333165582}
-  - component: {fileID: -1898650976462346488}
+  - component: {fileID: -6447813027709162707}
   m_Layer: 0
   m_Name: Cube (1)
   m_TagString: Bonus
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   WinMenu: {fileID: 0}
   MoveMenu: {fileID: 0}
---- !u!65 &-1898650976462346488
+--- !u!65 &-6447813027709162707
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,5 +122,5 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.99398345, y: 1.0020633, z: 0.98878574}
-  m_Center: {x: 0.0018902064, y: 0.18543696, z: -0.0012273788}
+  m_Size: {x: 1, y: 0.45631123, z: 1}
+  m_Center: {x: 0, y: 0.4595933, z: 0}
