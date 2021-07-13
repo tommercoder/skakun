@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.4465785, g: 0.49641252, b: 0.574817, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 8009d34727ab2b240a9045641eb380c6, type: 2}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 955a522d2e734804c879724c60fc1304, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: a9773f71881ffbfd6afe0824eb83af01, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 59fc62c1c4debdf4ab4e6b9bc948b261, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -311,7 +311,7 @@ MonoBehaviour:
   Object: {fileID: 772795263}
   Boy: {fileID: 2087863281}
   perfabToSpawn: {fileID: 663740227190960880, guid: 3df174dbe9b48b586bfc92dd79d561ae, type: 3}
-  perfabToSpawn2: {fileID: 663740227190960880, guid: 3df174dbe9b48b586bfc92dd79d561ae, type: 3}
+  perfabToSpawn2: {fileID: 831410352961533964, guid: 550402f188abe5fe5a96eacbb780c9d4, type: 3}
   spawnRadius: 40
   spawnCollisionCheckRadius: 5
   list: []

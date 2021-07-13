@@ -25,11 +25,8 @@ public class BobusScript : MonoBehaviour
         
     }
 
-    public GameObject WinMenu;
-    public GameObject MoveMenu;
-     private void OnCollisionEnter(Collision collision)
-    {
-         if(GetComponent<Collider>().tag == "Bonus"){
+    void OnTriggerEnter(Collider other){
+            if(other.CompareTag("Bonus")){
             Renderer rend = GetComponent<Renderer>();
             rend.material = Resources.Load<Material>("Red");
             BobusScript.addBonuses();
@@ -40,11 +37,16 @@ public class BobusScript : MonoBehaviour
 
             }
             
+            
             ObjectSpawner.CountBonuses--;
+            }
 
-        }
-           
     }
+
+    public GameObject WinMenu;
+    public GameObject MoveMenu;
+
+
 }
      
 
