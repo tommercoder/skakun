@@ -20,11 +20,13 @@ void Start(){
     SetPlane();
 
     SpawnPrefabs();
-
+    
     searchSpawn();
 
 
 }
+
+public static int CountBonuses = 0; 
 
 void SpawnPrefabs(){
 
@@ -34,7 +36,7 @@ void SpawnPrefabs(){
         if(SetTougle.Collision){
             if(i % 2 == 0){
                 //Instantiate(perfabToSpawn,spawnPoint,perfabToSpawn.rotation);
-                list.Add(Instantiate(perfabToSpawn,spawnPoint,perfabToSpawn.rotation));
+                Instantiate(perfabToSpawn,spawnPoint,perfabToSpawn.rotation);
             }        
             else{
                 list.Add(Instantiate(perfabToSpawn2,spawnPoint,perfabToSpawn.rotation));
@@ -43,7 +45,7 @@ void SpawnPrefabs(){
         if(!Physics.CheckSphere(spawnPoint,spawnCollisionCheckRadius)){
             if(i % 2 == 0){
                 //Instantiate(perfabToSpawn,spawnPoint,perfabToSpawn.rotation);
-                list.Add(Instantiate(perfabToSpawn,spawnPoint,perfabToSpawn.rotation));
+                Instantiate(perfabToSpawn,spawnPoint,perfabToSpawn.rotation);
             }        
             else{
                 list.Add(Instantiate(perfabToSpawn2,spawnPoint,perfabToSpawn.rotation));
@@ -51,6 +53,9 @@ void SpawnPrefabs(){
         }
         }
     }
+
+    CountBonuses = list.Count;
+
 }
 
 void SetPlane(){
