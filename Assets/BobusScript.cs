@@ -26,7 +26,6 @@ public class BobusScript : MonoBehaviour
        // MoveMenu = GameObject.FindWithTag("UiControls");
     }
 
-    // Update is called once per frame
     void Update()
     {
         
@@ -35,29 +34,27 @@ public class BobusScript : MonoBehaviour
     public GameObject WinMenu;
     public GameObject MoveMenu;
 
+    /*Resources.Load<Material>("Red")*/    
+
     private void OnTriggerEnter(Collider other)
     {
         if (GetComponent<Collider>().tag == "Bonus")
         {
             Renderer rend = GetComponent<Renderer>();
-            rend.material = Resources.Load<Material>("Red");
-            BobusScript.addBonuses();
+
+        if(rend.material.name == "Yellow (Instance)"){
+                rend.material = Resources.Load<Material>("Red");
+                BobusScript.addBonuses();
+            ObjectSpawner.CountBonuses--;
             if (ObjectSpawner.CountBonuses == 0)
             {
-
                 MoveMenu.SetActive(false);
                 WinMenu.SetActive(true);
-
             }
-
-            ObjectSpawner.CountBonuses--;
-
+            }
+            
+            
         }
-    }
-    private void OnCollisionEnter(Collision collision)
-    {
-       
-           
     }
 }
      

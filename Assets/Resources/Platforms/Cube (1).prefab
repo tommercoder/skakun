@@ -109,8 +109,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f162a28095bb8593bff3b67a49e8764, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canvas: {fileID: 0}
   WinMenu: {fileID: 0}
   MoveMenu: {fileID: 0}
+  m1: {fileID: 2100000, guid: 8aab4a58e837a38ba97a6fde8441deb9, type: 2}
+  m2: {fileID: 2100000, guid: 1291901a58846b7f4a960caebf38c0c8, type: 2}
 --- !u!65 &-6447813027709162707
 BoxCollider:
   m_ObjectHideFlags: 0
