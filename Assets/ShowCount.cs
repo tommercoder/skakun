@@ -10,13 +10,7 @@ public class ShowCount : MonoBehaviour
      public Slider sliderval;
      public TextMeshProUGUI change;
  public float slidervalint;
-    public static float PlatformsCount;
-
-
-    void Start()
-    {
-
-    }
+    public static float PlatformsCount = 30;
 
     void Update()
     {

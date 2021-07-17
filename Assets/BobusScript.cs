@@ -5,13 +5,20 @@ using UnityEngine;
 public class BobusScript : MonoBehaviour
 {
 
-    private static int bonuses = 0;
+    private static int bonuses = 20;
 
     public static void addBonuses(){
         BobusScript.bonuses++;
     } 
     public static int getBonuses(){
         return BobusScript.bonuses;
+    }
+
+    public static void setBonuses(int bon){
+        if(bonuses - bon >= 0){
+            bonuses = bonuses - bon; 
+        }
+        
     }
     // Start is called before the first frame update
     private void Awake()

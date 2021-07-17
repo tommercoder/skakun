@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SetTougle : MonoBehaviour
 {
 
-    public static bool Collision;
+    public static bool Collision = true;
     public GameObject toggler;
     void Update()
     {

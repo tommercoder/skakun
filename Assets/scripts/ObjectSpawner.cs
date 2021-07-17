@@ -9,8 +9,8 @@ public class ObjectSpawner : MonoBehaviour
     public Transform Boy;
 public Transform perfabToSpawn;
 public Transform perfabToSpawn2;
-//public int objectCount = 50;
-public float spawnRadius = 5;
+public int objectCount = 30;
+public float spawnRadius;
 
 public float spawnCollisionCheckRadius = 5;
 
