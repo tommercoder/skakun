@@ -8,7 +8,7 @@ public class BobusBox : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        BoBus.text = "" + BobusScript.getBonuses();
     }
 
     // Update is called once per frame
@@ -16,6 +16,6 @@ public class BobusBox : MonoBehaviour
     public TextMeshProUGUI BoBus;
     void Update()
     {
-        BoBus.text = "" + BobusScript.getBonuses();
+        
     }
 }

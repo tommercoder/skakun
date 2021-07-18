@@ -5,18 +5,21 @@ using UnityEngine;
 public class BobusScript : MonoBehaviour
 {
 
-    private static int bonuses = 20;
+    private static int bonuses = PlayerPrefs.GetInt("Bonuses");
 
     public static void addBonuses(){
         BobusScript.bonuses++;
+        PlayerPrefs.SetInt("Bonuses", BobusScript.bonuses + 100);
     } 
     public static int getBonuses(){
-        return BobusScript.bonuses;
+        return PlayerPrefs.GetInt("Bonuses");
     }
 
     public static void setBonuses(int bon){
         if(bonuses - bon >= 0){
-            bonuses = bonuses - bon; 
+            
+            bonuses = BobusScript.getBonuses() - bon; 
+            PlayerPrefs.SetInt("Bonuses", BobusScript.bonuses);
         }
         
     }
@@ -59,8 +62,6 @@ public class BobusScript : MonoBehaviour
                 WinMenu.SetActive(true);
             }
             }
-            
-            
         }
     }
 }
