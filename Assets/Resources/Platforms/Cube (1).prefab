@@ -19,7 +19,7 @@ GameObject:
   m_TagString: Bonus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &831410352961533964
 Transform:
@@ -112,8 +112,6 @@ MonoBehaviour:
   canvas: {fileID: 0}
   WinMenu: {fileID: 0}
   MoveMenu: {fileID: 0}
-  m1: {fileID: 2100000, guid: 8aab4a58e837a38ba97a6fde8441deb9, type: 2}
-  m2: {fileID: 2100000, guid: 1291901a58846b7f4a960caebf38c0c8, type: 2}
 --- !u!65 &-6447813027709162707
 BoxCollider:
   m_ObjectHideFlags: 0
