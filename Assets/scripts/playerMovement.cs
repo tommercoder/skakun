@@ -24,46 +24,14 @@ public class playerMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         //CinemachineCore.GetInputAxis = HandleAxisInputDelegate;
     }
-    //float HandleAxisInputDelegate(string axisName)
-    //{
-    //    switch (axisName)
-    //    {
 
-    //        case "Mouse X":
-
-    //            if (Input.touchCount > 0)
-    //            {
-    //                return Input.touches[0].deltaPosition.x / TouchSensitivity_x;
-    //            }
-    //            else
-    //            {
-    //                return Input.GetAxis(axisName);
-    //            }
-
-    //        case "Mouse Y":
-    //            if (Input.touchCount > 0)
-    //            {
-    //                return Input.touches[0].deltaPosition.y / TouchSensitivity_y;
-    //            }
-    //            else
-    //            {
-    //                return Input.GetAxis(axisName);
-    //            }
-
-    //        default:
-    //            Debug.LogError("Input <" + axisName + "> not recognyzed.", this);
-    //            break;
-    //    }
-
-    //    return 0f;
-    //}
     private void Update()
     {
         xSpeed =joystick.Horizontal; //Input.GetAxis("Horizontal");
         zSpeed = joystick.Vertical; //Input.GetAxis("Vertical");
 
-        cinemachine.m_XAxis.Value = cameraJoystick.Horizontal;
-        cinemachine.m_YAxis.Value = cameraJoystick.Vertical;
+        //cinemachine.m_XAxis.Value = cameraJoystick.Horizontal;
+        //cinemachine.m_YAxis.Value = cameraJoystick.Vertical;
 
 
         Vector3 forward = cam.transform.forward;
